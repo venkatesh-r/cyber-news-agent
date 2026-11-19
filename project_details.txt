@@ -1,0 +1,90 @@
+                    ┌─────────────────────┐
+                    │ Cybersecurity Agent │
+                    └──────────┬──────────┘
+                               │
+              ┌────────────────┼────────────────┐
+              ↓                ↓                ↓
+        BleepingComputer   CISA Alerts     Hacker News
+        Security News      Advisories      Security News
+              │                │                │
+              └────────────────┼────────────────┘
+                               ↓
+                       Collect RSS feeds
+                               ↓
+                       Remove duplicates
+                               ↓
+                     AI analyzes each story
+                               ↓
+              ┌────────────────┼────────────────┐
+              ↓                ↓                ↓
+          Attack type       CVE/Exploit       Threat actor
+          Data breach       Severity          Target
+              └────────────────┼────────────────┘
+                               ↓
+                         Risk scoring
+                               ↓
+                       Daily AI briefing
+                               ↓
+                     Email / Telegram / Web
+
+
+
+| Component | Free option |
+|---|---|
+| Programming | Python |
+| News collection | RSS |
+| AI model | Ollama + local model |
+| Agent framework | LangGraph or plain Python initially |
+| Database | SQLite |
+| Scheduler | Windows Task Scheduler / cron |
+| Email | Gmail/SMTP or another free mail service |
+| Hosting | Your PC initially |
+| Frontend | Next.js later |
+
+Local AI = almost completely free
+One particularly interesting option for you is Ollama.
+
+You can run an LLM locally:
+
+Your PC
+  │
+  ├── Python
+  │
+  ├── Ollama
+  │      └── Local LLM
+  │
+  ├── SQLite
+  │
+  └── Cybersecurity Agent
+
+
+Archietecture
+
+                    ┌──────────────────┐
+                    │ Cyber AI Agent   │
+                    └────────┬─────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              ↓              ↓              ↓
+           RSS Tool       CVE Tool       Search Tool
+              │              │              │
+              ↓              ↓              ↓
+          Cyber News       CISA/NVD       Web Sources
+              │              │              │
+              └──────────────┼──────────────┘
+                             ↓
+                      Deduplication
+                             ↓
+                      AI Extraction
+                             ↓
+                      Threat Analysis
+                             ↓
+                    Risk Prioritization
+                             ↓
+                       SQLite Memory
+                             ↓
+                  ┌──────────┴──────────┐
+                  ↓                     ↓
+             Daily Report          Critical Alert
+                  ↓                     ↓
+                Email                Telegram
